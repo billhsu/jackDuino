@@ -14,6 +14,7 @@ void loop()
 {
   while(modem.available()){
     int c = modem.read();
+    modem.write(c);
     if(isprint(c)){
       Serial.println((char)c);
     }
